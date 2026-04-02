@@ -60,9 +60,9 @@
 <script>
   const params = new URLSearchParams(window.location.search);
   const token = params.get("token");
-
+  console.log('Token'+token);
   if (token) {
-    const iframeUrl = `https://targetsite.com?token=${token}`;
+    const iframeUrl = `https://pricewaterhousecoopers2.my.site.com/intakeportal/s/intake-form?token=${token}`;
     document.getElementById("myFrame").src = iframeUrl;
   }
 </script>
