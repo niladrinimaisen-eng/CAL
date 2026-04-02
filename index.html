@@ -55,8 +55,17 @@
 
     <div class="form-container">
       <h2>Contact Form</h2>
-      <!-- Formstack / Salesforce Form -->
-      <script type="text/javascript" id="jsFastForms" src="https://playful-otter-cbkksz-dev-ed.trailblaze.my.salesforce-sites.com/CAL/services/apexrest/VisualAntidote/FFNEngine/v1/?d=kcqbwhSaMj2huYixpD3BnQ%3D%3D"></script>
+    <iframe id="myFrame" width="100%" height="500"></iframe>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get("token");
+
+  if (token) {
+    const iframeUrl = `https://targetsite.com?token=${token}`;
+    document.getElementById("myFrame").src = iframeUrl;
+  }
+</script>
     </div>
   </section>
 
